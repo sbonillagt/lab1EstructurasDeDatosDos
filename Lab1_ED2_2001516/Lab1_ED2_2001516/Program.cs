@@ -20,7 +20,7 @@ namespace Lab1_ED2_2001516
             Application.SetCompatibleTextRenderingDefault(false);
             //Utilities objUtilities = new Utilities();
             //objUtilities.initializingVariables();
-            Application.Run(new Form1());
+            Application.Run(new Form2());
 
             
         

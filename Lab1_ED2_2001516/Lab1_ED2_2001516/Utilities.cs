@@ -8,8 +8,7 @@ namespace Lab1_ED2_2001516
 {
     class Utilities
     {
-        string txtUser = ""; // Variable que entra como usuario
-        string txtPassword = ""; // variable que entra como contrasena
+   
         User objUser = new User();
         List<User> listUsers = new List<User>();
 
