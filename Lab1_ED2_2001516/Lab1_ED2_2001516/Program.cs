@@ -14,9 +14,17 @@ namespace Lab1_ED2_2001516
         [STAThread]
         static void Main()
         {
+            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Utilities objUtilities = new Utilities();
+            //objUtilities.initializingVariables();
             Application.Run(new Form1());
+
+            
+        
+
         }
     }
 }
