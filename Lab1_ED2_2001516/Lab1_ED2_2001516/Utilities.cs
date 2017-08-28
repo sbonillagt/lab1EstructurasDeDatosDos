@@ -13,8 +13,9 @@ namespace Lab1_ED2_2001516
         Song objSong = new Song();
         public List<User> listUsers = new List<User>();
         public List<Song> listOfAllSongs = new List<Song>();
-        
-        
+        public Playlist objPlaylist = new Playlist();
+        public List<Playlist> listOfPL = new List<Playlist>();
+
 
         public void initializingVariables()
         { 
