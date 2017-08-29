@@ -13,6 +13,7 @@ namespace Lab1_ED2_2001516
         public string artist { get; set; }
         public double duration { get; set; }
         public string album { get; set; }
+        public string file { get; set; }
 
         public int CompareTo(Song other)
         {

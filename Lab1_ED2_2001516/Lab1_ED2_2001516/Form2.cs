@@ -44,6 +44,12 @@ namespace Lab1_ED2_2001516
         private void Form2_Load(object sender, EventArgs e)
         {
             objUtilities.initializingVariables(); // ElIMNAR ESTA LINEA PORQUE SE INCIALIZA EN EL FORM 1 PERO AHORITA NO TENGo ACTIVADO EL FORm 1
+            objUtilities.readPlayListNames();
+            for (int i = 0; i < objUtilities.listOfNamesPL.Count; i++)
+            {
+                cBoxPlayList.Items.Add(objUtilities.listOfNamesPL[i]);
+            }
+
 
             auxTextRichBox = auxTextRichBox + "Todas\n";
             foreach (Song c in objUtilities.listOfAllSongs)
@@ -89,30 +95,49 @@ namespace Lab1_ED2_2001516
             auxNamePL= Microsoft.VisualBasic.Interaction.InputBox("Ingresa el nombre de tu PlayList", "Nombre de Playlist",
                 "Nombre de la playlist");
             
-            namePL.Add(auxNamePL);
+            objUtilities.listOfNamesPL.Add(auxNamePL);
             refreshListOfPlayList();
+            objUtilities.writePlayListNames();
         }
 
         public void refreshListOfPlayList()
         {
             cBoxPlayList.Items.Clear();
-            foreach (string d in namePL)
+            for (int i = 0; i < objUtilities.listOfNamesPL.Count; i++)
             {
-                cBoxPlayList.Items.Add(d);
+                cBoxPlayList.Items.Add(objUtilities.listOfNamesPL[i]);
             }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+           // objUtilities.auxCBox = cBoxPlayList.Text.ToString();
+            objUtilities.readPLbyPly(cBoxPlayList.Text);
+
+            dataGridView1.Rows.Clear();
+            foreach (Song c in objUtilities.listSongsByPlayList)
+            {
+                dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration);
+            }
         }
 
         private void btnAddToPl_Click(object sender, EventArgs e)
         {
             itemSelectedCB = cBoxPlayList.SelectedItem.ToString(); // Obtengo el nombre de la playkist que esta en el combobox
             dataGridView1.Rows.Clear(); // Limpio el datagrid
-            objUtilities.objPlaylist.nameOfPlaylist = itemSelectedCB; // le doy un nombre a la pl
+
+            int selectedRow = Convert.ToInt32(dataGridView1.CurrentRow);
+            objSong.name = dataGridView1.Rows[selectedRow].Cells[0].ToString();
+            objSong.album = dataGridView1.Rows[selectedRow].Cells[2].ToString();
+            objSong.artist = dataGridView1.Rows[selectedRow].Cells[1].ToString();
+            objSong.duration =Convert.ToInt32(dataGridView1.Rows[selectedRow].Cells[3].ToString());
             
+
+            objUtilities.objPlaylist.nameOfPlaylist = itemSelectedCB; // le doy un nombre a la pl
+            objUtilities.objPlaylist.ListOfSongPlaList.Add(objSong); // le doy las cansiones
+
+            objUtilities.listOfPL.Add(objUtilities.objPlaylist);
             //objUtilities.objPlaylist.ListOfSongPlaList.Add(dataGridView1.SelectedRows.ToString());
 
 
