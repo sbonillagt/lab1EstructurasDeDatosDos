@@ -40,20 +40,19 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cBoxPlayList = new System.Windows.Forms.ComboBox();
+            this.btnAddToPl = new System.Windows.Forms.Button();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cArtist = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cChek = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cBoxPlayList = new System.Windows.Forms.ComboBox();
-            this.btnAddToPl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(610, 175);
+            this.button1.Location = new System.Drawing.Point(618, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 23);
             this.button1.TabIndex = 1;
@@ -63,16 +62,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(610, 233);
+            this.button2.Location = new System.Drawing.Point(618, 207);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(610, 262);
+            this.button3.Location = new System.Drawing.Point(618, 236);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 23);
             this.button3.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(610, 204);
+            this.button4.Location = new System.Drawing.Point(618, 178);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 23);
             this.button4.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(611, 385);
+            this.button5.Location = new System.Drawing.Point(619, 359);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 23);
             this.button5.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(611, 414);
+            this.button6.Location = new System.Drawing.Point(619, 388);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(163, 23);
             this.button6.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             this.rbName.AutoSize = true;
             this.rbName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.rbName.Location = new System.Drawing.Point(612, 338);
+            this.rbName.Location = new System.Drawing.Point(620, 312);
             this.rbName.Name = "rbName";
             this.rbName.Size = new System.Drawing.Size(62, 17);
             this.rbName.TabIndex = 7;
@@ -124,7 +124,7 @@
             // rbDuration
             // 
             this.rbDuration.AutoSize = true;
-            this.rbDuration.Location = new System.Drawing.Point(612, 362);
+            this.rbDuration.Location = new System.Drawing.Point(620, 336);
             this.rbDuration.Name = "rbDuration";
             this.rbDuration.Size = new System.Drawing.Size(68, 17);
             this.rbDuration.TabIndex = 8;
@@ -153,15 +153,39 @@
             this.cName,
             this.cArtist,
             this.cAlbum,
-            this.cDuration,
-            this.cChek});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 132);
+            this.cDuration});
+            this.dataGridView1.Location = new System.Drawing.Point(36, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(576, 313);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // cBoxPlayList
+            // 
+            this.cBoxPlayList.FormattingEnabled = true;
+            this.cBoxPlayList.Location = new System.Drawing.Point(620, 118);
+            this.cBoxPlayList.Name = "cBoxPlayList";
+            this.cBoxPlayList.Size = new System.Drawing.Size(164, 21);
+            this.cBoxPlayList.TabIndex = 13;
+            // 
+            // btnAddToPl
+            // 
+            this.btnAddToPl.Location = new System.Drawing.Point(620, 266);
+            this.btnAddToPl.Name = "btnAddToPl";
+            this.btnAddToPl.Size = new System.Drawing.Size(162, 23);
+            this.btnAddToPl.TabIndex = 14;
+            this.btnAddToPl.Text = "Agregar canciones a playlist";
+            this.btnAddToPl.UseVisualStyleBackColor = true;
+            this.btnAddToPl.Click += new System.EventHandler(this.btnAddToPl_Click);
             // 
             // cName
             // 
+            this.cName.FillWeight = 200F;
             this.cName.Frozen = true;
             this.cName.HeaderText = "Nombre";
             this.cName.Name = "cName";
@@ -183,35 +207,6 @@
             this.cDuration.Frozen = true;
             this.cDuration.HeaderText = "Duracion";
             this.cDuration.Name = "cDuration";
-            // 
-            // cChek
-            // 
-            this.cChek.Frozen = true;
-            this.cChek.HeaderText = "Seleccionar";
-            this.cChek.Name = "cChek";
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // cBoxPlayList
-            // 
-            this.cBoxPlayList.FormattingEnabled = true;
-            this.cBoxPlayList.Location = new System.Drawing.Point(612, 144);
-            this.cBoxPlayList.Name = "cBoxPlayList";
-            this.cBoxPlayList.Size = new System.Drawing.Size(164, 21);
-            this.cBoxPlayList.TabIndex = 13;
-            // 
-            // btnAddToPl
-            // 
-            this.btnAddToPl.Location = new System.Drawing.Point(612, 292);
-            this.btnAddToPl.Name = "btnAddToPl";
-            this.btnAddToPl.Size = new System.Drawing.Size(162, 23);
-            this.btnAddToPl.TabIndex = 14;
-            this.btnAddToPl.Text = "Agregar canciones a playlist";
-            this.btnAddToPl.UseVisualStyleBackColor = true;
-            this.btnAddToPl.Click += new System.EventHandler(this.btnAddToPl_Click);
             // 
             // Form2
             // 
@@ -251,13 +246,12 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ComboBox cBoxPlayList;
+        private System.Windows.Forms.Button btnAddToPl;
         private System.Windows.Forms.DataGridViewTextBoxColumn cName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cArtist;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDuration;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn cChek;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ComboBox cBoxPlayList;
-        private System.Windows.Forms.Button btnAddToPl;
     }
 }
