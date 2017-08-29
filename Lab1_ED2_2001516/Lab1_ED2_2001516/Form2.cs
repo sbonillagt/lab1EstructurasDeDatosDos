@@ -52,34 +52,12 @@ namespace Lab1_ED2_2001516
                 cBoxPlayList.Items.Add(objUtilities.listOfNamesPL[i]);
             }
 
-
-            auxTextRichBox = auxTextRichBox + "Todas\n";
             foreach (Song c in objUtilities.listOfAllSongs)
             {
-                dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration);
-                auxTextRichBox = auxTextRichBox + c.name + " " + c.artist + " " + c.album + " " + c.duration + "\n";
+                dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration); 
             }
-            auxTextRichBox = auxTextRichBox + "\n";
-            richTextBox1.Text = auxTextRichBox;
-
-            auxTextRichBox = auxTextRichBox + "Duracion\n";
-            objUtilities.listOfAllSongs.Sort(); // por duracion
-            foreach (Song c in objUtilities.listOfAllSongs)
-            {
-                auxTextRichBox = auxTextRichBox + c.name + " " + c.artist + " " + c.album + " " + c.duration + "\n";
-            }
-            auxTextRichBox = auxTextRichBox + "\n";
-            richTextBox1.Text = auxTextRichBox;
-
-            auxTextRichBox = auxTextRichBox + "Nombre\n";
-
-            objUtilities.listOfAllSongs.Sort(objSortByName); // por nombre
-            foreach (Song c in objUtilities.listOfAllSongs)
-            {
-                auxTextRichBox = auxTextRichBox + c.name + " " + c.artist + " " + c.album + " " + c.duration + "\n";
-            }
-
-            richTextBox1.Text = auxTextRichBox + "\n";
+            
+            
 
         }
 
@@ -92,7 +70,7 @@ namespace Lab1_ED2_2001516
                 dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration);
             }
 
-            objUtilities.listSongsByPlayList.Clear();
+             objUtilities.listSongsByPlayList.Clear();
             for (int i = 0; i < objUtilities.listOfAllSongs.Count; i++)
             {
                 objUtilities.listSongsByPlayList.Add(objUtilities.listOfAllSongs[i]);
@@ -184,7 +162,19 @@ namespace Lab1_ED2_2001516
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var senderGrid = (DataGridView) sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                int posicion = dataGridView1.CurrentRow.Index;
+                string nameOfSong = dataGridView1.Rows[posicion].Cells[0].Value.ToString();
+                int indice = objUtilities.listOfAllSongs.FindIndex(x => x.name == nameOfSong);
 
+                Song objSongAddPL = new Song();
+                objSongAddPL = objUtilities.listOfAllSongs[indice];
+
+                axWindowsMediaPlayer1.URL = objSongAddPL.file;
+                int yu = 0;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -258,6 +248,22 @@ namespace Lab1_ED2_2001516
             {
                 MessageBox.Show("no a seleccionado si desea ordenar por nombre o duracion");
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                int posicion = dataGridView1.CurrentRow.Index;
+                string nameOfSong = dataGridView1.Rows[posicion].Cells[0].Value.ToString();
+                int indice = objUtilities.listOfAllSongs.FindIndex(x => x.name == nameOfSong);
+
+                Song objSongAddPL = new Song();
+                objSongAddPL = objUtilities.listOfAllSongs[indice];
+
+                axWindowsMediaPlayer1.URL = objSongAddPL.file;
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                int yu = 0;
+            
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,21 +39,22 @@
             this.rbName = new System.Windows.Forms.RadioButton();
             this.rbDuration = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cBoxPlayList = new System.Windows.Forms.ComboBox();
-            this.btnAddToPl = new System.Windows.Forms.Button();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cArtist = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cBoxPlayList = new System.Windows.Forms.ComboBox();
+            this.btnAddToPl = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(618, 149);
+            this.button1.Location = new System.Drawing.Point(616, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 23);
             this.button1.TabIndex = 1;
@@ -62,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(618, 207);
+            this.button2.Location = new System.Drawing.Point(616, 101);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 23);
             this.button2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(618, 236);
+            this.button3.Location = new System.Drawing.Point(616, 130);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 23);
             this.button3.TabIndex = 3;
@@ -82,7 +84,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(618, 178);
+            this.button4.Location = new System.Drawing.Point(616, 72);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 23);
             this.button4.TabIndex = 4;
@@ -92,7 +94,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(619, 359);
+            this.button5.Location = new System.Drawing.Point(617, 253);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 23);
             this.button5.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(619, 388);
+            this.button6.Location = new System.Drawing.Point(617, 282);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(163, 23);
             this.button6.TabIndex = 6;
@@ -114,7 +116,7 @@
             // 
             this.rbName.AutoSize = true;
             this.rbName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.rbName.Location = new System.Drawing.Point(620, 312);
+            this.rbName.Location = new System.Drawing.Point(618, 206);
             this.rbName.Name = "rbName";
             this.rbName.Size = new System.Drawing.Size(62, 17);
             this.rbName.TabIndex = 7;
@@ -126,7 +128,7 @@
             // rbDuration
             // 
             this.rbDuration.AutoSize = true;
-            this.rbDuration.Location = new System.Drawing.Point(620, 336);
+            this.rbDuration.Location = new System.Drawing.Point(618, 230);
             this.rbDuration.Name = "rbDuration";
             this.rbDuration.Size = new System.Drawing.Size(68, 17);
             this.rbDuration.TabIndex = 8;
@@ -140,14 +142,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(36, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(493, 84);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -156,34 +150,12 @@
             this.cArtist,
             this.cAlbum,
             this.cDuration});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(576, 313);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // cBoxPlayList
-            // 
-            this.cBoxPlayList.FormattingEnabled = true;
-            this.cBoxPlayList.Location = new System.Drawing.Point(620, 118);
-            this.cBoxPlayList.Name = "cBoxPlayList";
-            this.cBoxPlayList.Size = new System.Drawing.Size(164, 21);
-            this.cBoxPlayList.TabIndex = 13;
-            // 
-            // btnAddToPl
-            // 
-            this.btnAddToPl.Location = new System.Drawing.Point(620, 266);
-            this.btnAddToPl.Name = "btnAddToPl";
-            this.btnAddToPl.Size = new System.Drawing.Size(162, 23);
-            this.btnAddToPl.TabIndex = 14;
-            this.btnAddToPl.Text = "Agregar canciones a playlist";
-            this.btnAddToPl.UseVisualStyleBackColor = true;
-            this.btnAddToPl.Click += new System.EventHandler(this.btnAddToPl_Click);
             // 
             // cName
             // 
@@ -210,15 +182,47 @@
             this.cDuration.HeaderText = "Duracion";
             this.cDuration.Name = "cDuration";
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // cBoxPlayList
+            // 
+            this.cBoxPlayList.FormattingEnabled = true;
+            this.cBoxPlayList.Location = new System.Drawing.Point(618, 12);
+            this.cBoxPlayList.Name = "cBoxPlayList";
+            this.cBoxPlayList.Size = new System.Drawing.Size(164, 21);
+            this.cBoxPlayList.TabIndex = 13;
+            // 
+            // btnAddToPl
+            // 
+            this.btnAddToPl.Location = new System.Drawing.Point(618, 160);
+            this.btnAddToPl.Name = "btnAddToPl";
+            this.btnAddToPl.Size = new System.Drawing.Size(162, 23);
+            this.btnAddToPl.TabIndex = 14;
+            this.btnAddToPl.Text = "Agregar canciones a playlist";
+            this.btnAddToPl.UseVisualStyleBackColor = true;
+            this.btnAddToPl.Click += new System.EventHandler(this.btnAddToPl_Click);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(55, 335);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(519, 80);
+            this.axWindowsMediaPlayer1.TabIndex = 15;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 457);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.btnAddToPl);
             this.Controls.Add(this.cBoxPlayList);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.rbDuration);
             this.Controls.Add(this.rbName);
             this.Controls.Add(this.button6);
@@ -231,6 +235,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +251,6 @@
         private System.Windows.Forms.RadioButton rbName;
         private System.Windows.Forms.RadioButton rbDuration;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ComboBox cBoxPlayList;
@@ -255,5 +259,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cArtist;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDuration;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
