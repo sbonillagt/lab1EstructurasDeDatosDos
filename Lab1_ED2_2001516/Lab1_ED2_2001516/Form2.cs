@@ -86,10 +86,18 @@ namespace Lab1_ED2_2001516
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+
             foreach (Song c in objUtilities.listOfAllSongs)
             {
                 dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration);
             }
+
+            objUtilities.listSongsByPlayList.Clear();
+            for (int i = 0; i < objUtilities.listOfAllSongs.Count; i++)
+            {
+                objUtilities.listSongsByPlayList.Add(objUtilities.listOfAllSongs[i]);
+            }
+            // objUtilities.listSongsByPlayList= objUtilities.listOfAllSongs;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -203,5 +211,54 @@ namespace Lab1_ED2_2001516
 
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (rbName.Checked)
+            {
+                objUtilities.listSongsByPlayList.Sort(objSortByName); // por nombre
+                showInDataGridPL();
+            }
+            else if (rbDuration.Checked)
+            {
+                objUtilities.listSongsByPlayList.Sort(); // por duracion
+                showInDataGridPL();
+            }
+            else
+            {
+                MessageBox.Show("no a seleccionado si desea ordenar por nombre o duracion");
+            }
+
+        }
+
+        public void showInDataGridPL()
+        {
+            dataGridView1.Rows.Clear();
+            foreach (Song c in objUtilities.listSongsByPlayList)
+            {
+                dataGridView1.Rows.Add(c.name, c.artist, c.album, c.duration);    
+            }  
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (rbName.Checked)
+            {
+                objUtilities.listSongsByPlayList.Sort(objSortByName); // por nombre
+                objUtilities.listSongsByPlayList.Reverse();
+                showInDataGridPL();
+            }
+            else if (rbDuration.Checked)
+            {
+                objUtilities.listSongsByPlayList.Sort(); // por duracion
+                objUtilities.listSongsByPlayList.Reverse();
+                showInDataGridPL();
+            }
+            else
+            {
+                MessageBox.Show("no a seleccionado si desea ordenar por nombre o duracion");
+            }
+        }
     }
 }
+

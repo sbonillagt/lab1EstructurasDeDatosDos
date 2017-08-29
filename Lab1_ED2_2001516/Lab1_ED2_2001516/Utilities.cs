@@ -14,7 +14,7 @@ namespace Lab1_ED2_2001516
         User objUser = new User();
         Song objSong = new Song();
         public List<User> listUsers = new List<User>();
-        public List<Song> listOfAllSongs = new List<Song>();
+        public  List<Song> listOfAllSongs = new List<Song>();
 
         public Playlist objPlaylist = new Playlist();
         public List<Playlist> listOfPL = new List<Playlist>();
@@ -34,6 +34,11 @@ namespace Lab1_ED2_2001516
         public void initializingVariables()
         {
             readPLbyPly("todaslascanciones.txt");
+            listSongsByPlayList.Clear();
+            for (int i = 0; i < listOfAllSongs.Count; i++)
+            {
+                listSongsByPlayList.Add(listOfAllSongs[i]);
+            }
             User admin = new User();
             admin.user = "1234";
             admin.password = "1234";
