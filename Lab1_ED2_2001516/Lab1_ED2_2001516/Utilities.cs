@@ -21,8 +21,6 @@ namespace Lab1_ED2_2001516
         public Song auxSong;
         int z = 0;
 
-
-
         //Lectura De PlayList
         private string[] nameOfPlayListInSistemARRAY = null;
         private string[] auxAtributesSongs = null;
@@ -31,25 +29,21 @@ namespace Lab1_ED2_2001516
         
         public string auxCBox = "";
 
+        //Inciializacion de variabeles
         public void initializingVariables()
         {
             readPLbyPly("todaslascanciones.txt");
-            listSongsByPlayList.Clear();
             for (int i = 0; i < listOfAllSongs.Count; i++)
             {
                 listSongsByPlayList.Add(listOfAllSongs[i]);
             }
             User admin = new User();
-            admin.user = "1234";
+            admin.user = "Admin";
             admin.password = "1234";
             listUsers.Add(admin);
-
-            
-
-
         }
 
-        // Lectura de playlist Existentes
+        // Lectura de playlist Existentes de su archivo .txt
         public void readPlayListNames()
         {
             if (!File.Exists("playlistExistentes.txt"))
@@ -78,7 +72,7 @@ namespace Lab1_ED2_2001516
             
         }
 
-        //Escribe los nuevos nombres de las playlist en su archivo pa que no se le olviden
+        //Escribe los nuevos nombres de las playlist en su archivo de tipo .txt
         public void writePlayListNames()
         {
 
@@ -102,14 +96,9 @@ namespace Lab1_ED2_2001516
             objWriter.Close();
         }
 
+        //Lee playlist por playlist de su archivo obteniendo el nombre del archivo del combo box
         public void readPLbyPly(string namePL)
-        {
-            //Song song1 = new Song();
-            //song1.name = "Rihanna";
-            //song1.album = "El dorado";
-            //song1.artist = "Jesse Baez";
-            //song1.duration = 4.59;
-            //listOfAllSongs.Add(song1);
+        {         
 
             if (!File.Exists(namePL + ".txt"))
             {
@@ -151,6 +140,7 @@ namespace Lab1_ED2_2001516
             z++;
         }
 
+        //Escribe las playlist dentro de su archivo de texto. 
         public void writePlayList(string namePL)
         {
             if (!File.Exists(namePL + ".txt"))
@@ -172,6 +162,7 @@ namespace Lab1_ED2_2001516
 
         }
 
+        //Verifica el usuario y password del usuario
         public bool chekUserAndPassword(string iUser, string iPassword)
         {
             User userVariable =new User();

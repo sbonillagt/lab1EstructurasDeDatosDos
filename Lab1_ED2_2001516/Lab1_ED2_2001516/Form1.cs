@@ -19,6 +19,7 @@ namespace Lab1_ED2_2001516
             InitializeComponent();
             objUtilities.initializingVariables();
 
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +27,11 @@ namespace Lab1_ED2_2001516
             if (objUtilities.chekUserAndPassword(tbUser.Text, tbPassword.Text)==true)
             {
                 MessageBox.Show("Pase joven");
+                Form2 objForm1 = new Form2();
+                Form2 objForm2 = new Form2();
+                objForm1.Visible = false;
+                objForm2.Visible = true;
+
             }
             else
             {
@@ -39,6 +45,16 @@ namespace Lab1_ED2_2001516
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

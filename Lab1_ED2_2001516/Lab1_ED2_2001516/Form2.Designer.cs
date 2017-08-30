@@ -48,13 +48,14 @@
             this.cBoxPlayList = new System.Windows.Forms.ComboBox();
             this.btnAddToPl = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(616, 43);
+            this.button1.Location = new System.Drawing.Point(611, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 23);
             this.button1.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(616, 101);
+            this.button2.Location = new System.Drawing.Point(611, 164);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 23);
             this.button2.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(616, 130);
+            this.button3.Location = new System.Drawing.Point(611, 193);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 23);
             this.button3.TabIndex = 3;
@@ -84,7 +85,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(616, 72);
+            this.button4.Location = new System.Drawing.Point(611, 135);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 23);
             this.button4.TabIndex = 4;
@@ -94,7 +95,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(617, 253);
+            this.button5.Location = new System.Drawing.Point(612, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 23);
             this.button5.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(617, 282);
+            this.button6.Location = new System.Drawing.Point(612, 345);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(163, 23);
             this.button6.TabIndex = 6;
@@ -116,7 +117,7 @@
             // 
             this.rbName.AutoSize = true;
             this.rbName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.rbName.Location = new System.Drawing.Point(618, 206);
+            this.rbName.Location = new System.Drawing.Point(613, 269);
             this.rbName.Name = "rbName";
             this.rbName.Size = new System.Drawing.Size(62, 17);
             this.rbName.TabIndex = 7;
@@ -128,7 +129,7 @@
             // rbDuration
             // 
             this.rbDuration.AutoSize = true;
-            this.rbDuration.Location = new System.Drawing.Point(618, 230);
+            this.rbDuration.Location = new System.Drawing.Point(613, 293);
             this.rbDuration.Name = "rbDuration";
             this.rbDuration.Size = new System.Drawing.Size(68, 17);
             this.rbDuration.TabIndex = 8;
@@ -150,12 +151,13 @@
             this.cArtist,
             this.cAlbum,
             this.cDuration});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(576, 313);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // cName
             // 
@@ -190,14 +192,14 @@
             // cBoxPlayList
             // 
             this.cBoxPlayList.FormattingEnabled = true;
-            this.cBoxPlayList.Location = new System.Drawing.Point(618, 12);
+            this.cBoxPlayList.Location = new System.Drawing.Point(613, 75);
             this.cBoxPlayList.Name = "cBoxPlayList";
             this.cBoxPlayList.Size = new System.Drawing.Size(164, 21);
             this.cBoxPlayList.TabIndex = 13;
             // 
             // btnAddToPl
             // 
-            this.btnAddToPl.Location = new System.Drawing.Point(618, 160);
+            this.btnAddToPl.Location = new System.Drawing.Point(613, 223);
             this.btnAddToPl.Name = "btnAddToPl";
             this.btnAddToPl.Size = new System.Drawing.Size(162, 23);
             this.btnAddToPl.TabIndex = 14;
@@ -208,17 +210,28 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(55, 335);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(31, 398);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(519, 80);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(576, 98);
             this.axWindowsMediaPlayer1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(202, -10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(360, 106);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "YuTUNES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 457);
+            this.ClientSize = new System.Drawing.Size(800, 521);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.btnAddToPl);
             this.Controls.Add(this.cBoxPlayList);
@@ -231,6 +244,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -260,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDuration;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Label label1;
     }
 }
