@@ -1,0 +1,5 @@
+Tu Foto,Ozuna,Odisea,3.12,Canciones\Tu foto.mp3
+Reggaeton Lento,CNCO,Primera Cita,4.10,Canciones\ReggaetonLento.mp3
+La Ultima Vez, Anuel AA, Real Hasta La Muerte,5.10,Canciones\La ultima vez.mp3
+Hasta el Amanecer Remix, Nicky Jam,Fenix,3.08,Canciones\Hasta el amanecer Remix.mp3
+Si tu novio te deja sola, J Balvin, Sencillo,4.04,Canciones\Si tu novio te deja sola.mp3

@@ -1,0 +1,15 @@
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\bin\Debug\Lab1_ED2_2001516.exe.config
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\bin\Debug\Lab1_ED2_2001516.exe
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\bin\Debug\Lab1_ED2_2001516.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.Form1.resources
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.Properties.Resources.resources
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.csproj.GenerateResource.Cache
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.exe
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.Form2.resources
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Interop.WMPLib.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\obj\Debug\Lab1_ED2_2001516.csproj.ResolveComReference.cache
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\bin\Debug\Interop.WMPLib.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\Lab1_EstructurasDos\lab1EstructurasDeDatosDos\Lab1_ED2_2001516\Lab1_ED2_2001516\bin\Debug\AxInterop.WMPLib.dll

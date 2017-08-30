@@ -32,8 +32,7 @@ namespace Lab1_ED2_2001516
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            //rbName.AutoCheck = true;
-            //rbDuration.AutoCheck = true;
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
